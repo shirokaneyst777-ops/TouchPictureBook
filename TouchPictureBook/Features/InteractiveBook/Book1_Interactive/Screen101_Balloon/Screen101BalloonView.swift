@@ -38,7 +38,7 @@ enum BalloonMetrics {
     }
 }
 
-struct BalloonView: View {
+struct Screen101BalloonView: View {
     private enum Phase: Equatable {
         case rising
         case popping(frame: Int)

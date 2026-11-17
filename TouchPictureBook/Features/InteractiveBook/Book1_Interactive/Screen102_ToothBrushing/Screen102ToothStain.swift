@@ -64,7 +64,7 @@ struct ToothRegion: Identifiable, Equatable {
     }
 }
 
-struct ToothStain: Identifiable, Equatable {
+struct Screen102ToothStain: Identifiable, Equatable {
     let id = UUID()
     let imageName: String
     let toothID: String

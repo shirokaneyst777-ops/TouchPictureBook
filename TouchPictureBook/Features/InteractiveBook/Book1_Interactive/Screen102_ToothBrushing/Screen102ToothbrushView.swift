@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ToothbrushView: View {
+struct Screen102ToothbrushView: View {
     let touchLocation: CGPoint
     let availableWidth: CGFloat
 

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ToothSparkleView: View {
+struct Screen102ToothSparkleView: View {
     @State private var isAnimating = false
 
     private let offsets: [CGSize] = [

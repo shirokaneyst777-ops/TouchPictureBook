@@ -134,7 +134,7 @@ enum CrowMetrics {
     }
 }
 
-struct CrowView: View {
+struct Screen101CrowView: View {
     let availableSize: CGSize
     let configuration: CrowConfiguration
     let phase: CrowAnimationPhase

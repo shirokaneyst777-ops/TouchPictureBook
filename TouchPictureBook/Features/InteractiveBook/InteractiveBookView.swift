@@ -139,7 +139,7 @@ private struct BookPageContent: View {
         if currentPage == 1 {
             BalloonPageView(isActive: isActive)
         } else if currentPage == 2 {
-            ToothBrushingGameView(isActive: isActive)
+            Screen102ToothBrushingGameView(isActive: isActive)
         } else {
             PlaceholderBookPage()
         }
@@ -152,7 +152,7 @@ private struct BalloonPageView: View {
     var body: some View {
         ZStack {
             BalloonBackgroundView()
-            BalloonGameView(isActive: isActive)
+            Screen101BalloonGameView(isActive: isActive)
         }
     }
 }

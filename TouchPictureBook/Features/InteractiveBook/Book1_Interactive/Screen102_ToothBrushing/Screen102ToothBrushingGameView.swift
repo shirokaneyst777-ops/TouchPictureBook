@@ -3,7 +3,7 @@ import SwiftUI
 import UIKit
 #endif
 
-struct ToothBrushingGameView: View {
+struct Screen102ToothBrushingGameView: View {
     let isActive: Bool
 
     private enum Metrics {
@@ -26,7 +26,7 @@ struct ToothBrushingGameView: View {
     }
 
     @Environment(\.scenePhase) private var scenePhase
-    @State private var stains: [ToothStain] = []
+    @State private var stains: [Screen102ToothStain] = []
     @State private var touchLocation: CGPoint?
     @State private var movementReferenceLocation: CGPoint?
     @State private var movementReferenceDate: Date?
@@ -59,7 +59,7 @@ struct ToothBrushingGameView: View {
                         in: babyFrame
                     )
 
-                    ToothStainView(
+                    Screen102ToothStainView(
                         imageName: stain.imageName,
                         progress: stain.brushingProgress,
                         width: babyFrame.width * stain.normalizedWidth
@@ -67,13 +67,13 @@ struct ToothBrushingGameView: View {
                     .position(position)
 
                     if stain.isRemoved {
-                        ToothSparkleView()
+                        Screen102ToothSparkleView()
                             .position(position)
                     }
                 }
 
                 if let touchLocation, !isComplete {
-                    ToothbrushView(
+                    Screen102ToothbrushView(
                         touchLocation: touchLocation,
                         availableWidth: geometry.size.width
                     )
@@ -289,7 +289,7 @@ struct ToothBrushingGameView: View {
         let imageNames = ["tooth_decay_1", "tooth_decay_2", "tooth_decay_3"]
 
         stains = zip(imageNames, selectedTeeth).map { imageName, tooth in
-            ToothStain(
+            Screen102ToothStain(
                 imageName: imageName,
                 toothID: tooth.id,
                 normalizedPosition: tooth.normalizedCenter,
@@ -348,7 +348,7 @@ struct ToothBrushingGameView: View {
 #endif
     }
 
-    private func logBrushingProgress(for stain: ToothStain, at bristle: CGPoint) {
+    private func logBrushingProgress(for stain: Screen102ToothStain, at bristle: CGPoint) {
 #if DEBUG
         let step = Int(stain.brushingProgress * 4)
         guard step > loggedProgressSteps[stain.id, default: 0] else { return }
@@ -412,7 +412,7 @@ private struct BabyFaceView: View {
     }
 }
 
-private struct ToothStainView: View {
+private struct Screen102ToothStainView: View {
     let imageName: String
     let progress: Double
     let width: CGFloat

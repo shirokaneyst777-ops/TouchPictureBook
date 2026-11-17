@@ -52,7 +52,7 @@ struct BalloonConfiguration: Identifiable, Equatable {
     }
 }
 
-struct BalloonGameView: View {
+struct Screen101BalloonGameView: View {
     let isActive: Bool
 
     private let minimumBalloonCount = 3
@@ -72,7 +72,7 @@ struct BalloonGameView: View {
         GeometryReader { geometry in
             ZStack {
                 ForEach(balloons) { balloon in
-                    BalloonView(
+                    Screen101BalloonView(
                         availableSize: geometry.size,
                         configuration: balloon,
                         collisionTrigger: collisionTriggers[balloon.id, default: 0],
@@ -83,7 +83,7 @@ struct BalloonGameView: View {
 
                 if let crow {
                     TimelineView(.animation) { context in
-                        CrowView(
+                        Screen101CrowView(
                             availableSize: geometry.size,
                             configuration: crow,
                             phase: crowPhase,

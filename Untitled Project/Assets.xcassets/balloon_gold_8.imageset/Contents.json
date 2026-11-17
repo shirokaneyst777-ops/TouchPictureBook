@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "balloon_gold_8.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
